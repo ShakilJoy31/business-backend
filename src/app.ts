@@ -12,7 +12,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 // Application Route.
-app.use('/api/v1/digital-cow-hut/', router);
+app.use('/api/v1/', router);
+
 
 // Global Error handler
 app.use(globalErrorHandler);
@@ -33,6 +34,8 @@ app.use((req:Request, res: Response, next: NextFunction)=>{
     next();
 })
 
+// Requirements
+// https://github.com/Apollo-Level2-Web-Dev/Digital-Cow-Hut
 
 export default app
 

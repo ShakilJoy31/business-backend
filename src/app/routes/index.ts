@@ -1,25 +1,17 @@
 import express from 'express';
-import sellerRoute from '../module/cowSeller/cowseller.route'
-import buyerRoute from '../module/cowBuyer/cowbuyer.route'
+import sellerRoute from '../module/manager/businessInfo.route'
+import buyerRoute from '../module/businessInfo/businessInfo.route'
 
 const router = express.Router()
 const routesToVisit = [
     {
-        path:'/cow-seller',
+        path:'/onboarding',
         route: sellerRoute
     },
     {
-        path:'/cow-buyer',
+        path:'/onboarding',
         route: buyerRoute
     }
-    // {
-    //     path:'/cow-buyer',
-    //     route: buyerRoute
-    // },
-    // {
-    //     path:'/cow',
-    //     route: cow
-    // },
 ]
 
 routesToVisit.forEach(route => router.use(route.path, route.route))

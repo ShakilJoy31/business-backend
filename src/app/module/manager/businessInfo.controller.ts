@@ -1,5 +1,6 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
-import { CowSellerService } from "./cowseller.service";
+import { CowSellerService } from "./BusinessInfo.service";
+import pick from "../shared/pick";
 
 const createCowSellerController:RequestHandler = async (req: Request, res: Response, next: NextFunction) =>{
     try{
@@ -7,7 +8,7 @@ const createCowSellerController:RequestHandler = async (req: Request, res: Respo
         const result = await CowSellerService.createCowSellerService(cowSellerData)
         res.status(200).json({
             success: true,
-            message: 'Cow seller created successfully',
+            message: 'Business information is added successfully',
             data: result
         })
     }catch(error){
@@ -21,7 +22,7 @@ const getCowSellers:RequestHandler = async (req: Request, res: Response, next: N
         const result = await CowSellerService.getCowSellers();
         res.status(200).json({
             success: true,
-            message: 'Cow sellers retrieved successfully.',
+            message: 'Business information retrieved successfully.',
             data: result
         })
     }catch(error){
@@ -35,7 +36,7 @@ const particularCowSeller:RequestHandler = async (req: Request, res: Response, n
         const result = await CowSellerService.getParticularCowSeller(id)
         res.status(200).json({
             success: true,
-            message: 'Particular cow seller retrieved successfully',
+            message: 'Particular business information retrieved successfully',
             data: result
         })
     }catch(error){
@@ -50,7 +51,7 @@ const updateCowSeller:RequestHandler = async (req: Request, res: Response, next:
     const result = await CowSellerService.updateCowSeller(id, updatedData);
     res.status(200).json({
         success: true,
-        message: 'Information of the cow seller is updated successfully.',
+        message: 'Business information is updated successfully.',
         data: result
     })
     }catch(error){

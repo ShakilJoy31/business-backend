@@ -1,5 +1,5 @@
 import { Model, Schema, model } from "mongoose";
-import { ICowBuyer } from "./cowbuyer.interface";
+import { ICowBuyer } from "./businessInfo.interface";
 
 export type CowBuyerModel = Model<ICowBuyer, object>;
 

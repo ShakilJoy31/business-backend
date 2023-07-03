@@ -1,5 +1,5 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
-import { CowBuyerService } from "./cowbuyer.service";
+import { CowBuyerService } from "./businessInfo.service";
 
 const createCowBuyerController:RequestHandler = async (req: Request, res: Response, next: NextFunction) =>{
     try{

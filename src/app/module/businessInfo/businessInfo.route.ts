@@ -1,7 +1,7 @@
 import express from 'express'; 
 import requestValidator from '../../middlewares/validateRequest';
-import { CowBuyerValidation } from './cowbuyer.validation';
-import { CowBuyerController } from './cowbuyer.controller';
+import { CowBuyerValidation } from './businessInfo.validation';
+import { CowBuyerController } from './businessInfo.controller';
 
 const router = express.Router();
 
@@ -22,24 +22,4 @@ router.delete('/:id', CowBuyerController.deleteParticularCowBuyer)
 
 
 export default router;
-
-
-
-
-// APIs for readme.md
-
-// Buyer post
-// http://localhost:5000/api/v1/digital-cow-hut/cow-buyer/create-buyer
-
-// Buyer get all
-// http://localhost:5000/api/v1/digital-cow-hut/cow-buyer/get-buyers
-
-// Buyer get particular
-// http://localhost:5000/api/v1/digital-cow-hut/cow-buyer/649ead314caec7574736f2d9
-
-// Updated buyer
-// http://localhost:5000/api/v1/digital-cow-hut/cow-buyer/649ead314caec7574736f2d9
-
-// Delete buyer
-// http://localhost:5000/api/v1/digital-cow-hut/cow-buyer/649ead4e4caec7574736f2dd
 

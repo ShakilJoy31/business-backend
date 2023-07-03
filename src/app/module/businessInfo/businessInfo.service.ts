@@ -1,5 +1,5 @@
-import { CowBuyerModel } from "./cowbuyer.model";
-import { ICowBuyer } from "./cowbuyer.interface"
+import { CowBuyerModel } from "./businessInfo.model";
+import { ICowBuyer } from "./businessInfo.interface"
 
 const createCowBuyerService = async (payload: ICowBuyer) =>{
     const newCowSeller = await CowBuyerModel.create(payload);

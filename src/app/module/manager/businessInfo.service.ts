@@ -1,5 +1,9 @@
-import { ICowSeller } from "./cowseller.interface"
-import { CowSellerModel } from "./cowseller.model"
+import { SortOrder } from "mongoose";
+import { IGenericResponse } from "../../../interfaces/common";
+import { IPaginationOptions } from "../../../interfaces/pagination";
+import { paginationHelper } from "../../helper/paginationHelper";
+import { ICowSeller, ICowSellerFilters } from "./businessInfo.interface"
+import { CowSellerModel } from "./businessInfo.model"
 
 const createCowSellerService = async (payload: ICowSeller) =>{
     const newCowSeller = await CowSellerModel.create(payload);
@@ -7,8 +11,8 @@ const createCowSellerService = async (payload: ICowSeller) =>{
 }
 
 const getCowSellers = async():Promise<ICowSeller[]> =>{
-    const result = await CowSellerModel.find();
-    return result;
+    const result = await CowSellerModel.find({});
+    return result
 }
 
 const getParticularCowSeller = async (id:string) =>{
