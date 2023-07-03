@@ -1,6 +1,5 @@
 import { NextFunction, Request, RequestHandler, Response } from "express";
-import { CowSellerService } from "./BusinessInfo.service";
-import pick from "../shared/pick";
+import {CowSellerService} from './business.service';
 
 const createCowSellerController:RequestHandler = async (req: Request, res: Response, next: NextFunction) =>{
     try{

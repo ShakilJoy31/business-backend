@@ -1,8 +1,4 @@
-import { SortOrder } from "mongoose";
-import { IGenericResponse } from "../../../interfaces/common";
-import { IPaginationOptions } from "../../../interfaces/pagination";
-import { paginationHelper } from "../../helper/paginationHelper";
-import { ICowSeller, ICowSellerFilters } from "./businessInfo.interface"
+import { ICowSeller } from "./businessInfo.interface"
 import { CowSellerModel } from "./businessInfo.model"
 
 const createCowSellerService = async (payload: ICowSeller) =>{
