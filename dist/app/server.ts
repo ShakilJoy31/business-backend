@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import config from "./config";
+import config from "../config/index";
 import { Server } from "http";
 import app from "./app";
 
