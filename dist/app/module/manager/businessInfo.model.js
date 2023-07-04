@@ -26,6 +26,7 @@ exports.cowSellerSchema = new mongoose_1.Schema({
     email: {
         type: String,
         required: true,
+        unique: true
     },
     address: {
         type: String,
