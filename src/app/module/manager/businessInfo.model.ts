@@ -35,7 +35,7 @@ export const cowSellerSchema = new Schema<ICowSeller>({
   },
   
   contactNo: {
-    type: String,
+    type: Number,
     required: true,
   },
   openingTime: {

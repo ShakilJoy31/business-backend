@@ -5,6 +5,7 @@ const createCowSellerController:RequestHandler = async (req: Request, res: Respo
     try{
         const cowSellerData = req.body;
         const result = await CowSellerService.createCowSellerService(cowSellerData)
+        console.log(cowSellerData);
         res.status(200).json({
             success: true,
             message: 'Business information is added successfully',
@@ -16,14 +17,16 @@ const createCowSellerController:RequestHandler = async (req: Request, res: Respo
 }
 
 // Controller for getting all the seller.
-const getCowSellers:RequestHandler = async (req: Request, res: Response, next: NextFunction) =>{
+const getCowSellers:RequestHandler = (req: Request, res: Response, next: NextFunction) =>{
     try{
-        const result = await CowSellerService.getCowSellers();
-        res.status(200).json({
-            success: true,
-            message: 'Business information retrieved successfully.',
-            data: result
-        })
+
+        // const result = CowSellerService.getCowSellers();
+        throw new Error('message');
+        // res.status(200).json({
+        //     success: true,
+        //     message: 'Business information retrieved successfully.',
+        //     data: result
+        // })
     }catch(error){
         next(error)
     }
@@ -70,7 +73,6 @@ const deleteParticularCowSeller:RequestHandler = async (req: Request, res: Respo
     }catch(error){
         next(error)
     }
-
 }
 
 export const CowSellerController = {

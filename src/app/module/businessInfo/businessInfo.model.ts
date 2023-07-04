@@ -4,28 +4,19 @@ import { ICowBuyer } from "./businessInfo.interface";
 export type CowBuyerModel = Model<ICowBuyer, object>;
 
 export const cowBuyerSchema = new Schema<ICowBuyer>({
-  password: {
+  fullName: {
     type: String,
     required: true,
   },
-  role: {
+  state: {
     type: String,
     required: true,
   },
-  name: {
-    firstName: {
-      type: String,
-      required: true,
-    },
-    middleName: {
-      type: String
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
+  city: {
+    type: String,
+    required: true,
   },
-  phoneNumber: {
+  country: {
     type: String,
     required: true,
   },
@@ -33,14 +24,18 @@ export const cowBuyerSchema = new Schema<ICowBuyer>({
     type: String,
     required: true,
   },
-  budget: {
-    type: Number,
-    required: true
+  email: {
+    type: String,
+    required: true,
   },
-  income: {
+  mobileNumber: {
     type: Number,
-    required: true
+    required: true,
   },
+  image: {
+    type: String,
+    required: true,
+  }
 }, {
     timestamps: true,
     toJSON: {
@@ -48,4 +43,4 @@ export const cowBuyerSchema = new Schema<ICowBuyer>({
     }
 });
 
-export const CowBuyerModel = model<ICowBuyer, CowBuyerModel>('cowBuyerCollection', cowBuyerSchema)
+export const CowBuyerModel = model<ICowBuyer, CowBuyerModel>('managerInformation', cowBuyerSchema)

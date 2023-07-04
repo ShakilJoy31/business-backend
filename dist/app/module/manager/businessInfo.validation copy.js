@@ -4,19 +4,19 @@ exports.CowBuyerValidation = void 0;
 const zod_1 = require("zod");
 const createCowBuyer = zod_1.z.object({
     body: zod_1.z.object({
-        fullName: zod_1.z.string({
+        businessName: zod_1.z.string({
             required_error: "Business name is required",
         }),
-        state: zod_1.z.string({
+        country: zod_1.z.string({
             required_error: "Country is required",
         }),
-        city: zod_1.z.string({
+        state: zod_1.z.string({
             required_error: "State is required",
         }),
         bannerImg: zod_1.z.string({
             required_error: "Picture is required",
         }),
-        country: zod_1.z.string({
+        city: zod_1.z.string({
             required_error: "City is required",
         }),
         email: zod_1.z.string({
@@ -27,6 +27,12 @@ const createCowBuyer = zod_1.z.object({
         }),
         contactNo: zod_1.z.string({
             required_error: "Contact is required",
+        }),
+        openingTime: zod_1.z.string({
+            required_error: "Opening time is required",
+        }),
+        closingTime: zod_1.z.string({
+            required_error: "Closing time is required",
         }),
     }),
 });

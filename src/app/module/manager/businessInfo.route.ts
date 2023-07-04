@@ -1,12 +1,12 @@
 import express from "express";
 import requestValidator from "../../middlewares/validateRequest";
-import { CowBuyerValidation } from "../businessInfo/businessInfo.validation";
+import { CowBuyerValidation } from "./businessInfo.validation copy";
 import { CowSellerController } from "./businessInfo.controller";
 
 const router = express.Router();
 
 router.post(
-  "/page1", CowSellerController.createCowSellerController
+  "/page1",requestValidator(CowBuyerValidation.createCowBuyer), CowSellerController.createCowSellerController
 );
 
 router.get("/page1", CowSellerController.getCowSellers);
@@ -18,8 +18,3 @@ router.patch("/:id", CowSellerController.updateCowSeller);
 router.delete("/:id", CowSellerController.deleteParticularCowSeller);
 
 export default router;
-
-// APIs
-// post: http://localhost:5000/api/v1/onboarding/page1
-// Get-all: http://localhost:5000/api/v1/onboarding/page1
-// Update: http://localhost:5000/api/v1/onboarding/64a2fd7874aff46aa9b59054

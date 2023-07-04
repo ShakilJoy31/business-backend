@@ -2,19 +2,19 @@ import { z } from "zod";
 
 const createCowBuyer = z.object({
   body: z.object({
-    fullName: z.string({
+    businessName: z.string({
       required_error: "Business name is required",
     }),
-    state: z.string({
+    country: z.string({
       required_error: "Country is required",
     }),
-    city: z.string({
+    state: z.string({
       required_error: "State is required",
     }),
     bannerImg: z.string({
       required_error: "Picture is required",
     }),
-    country: z.string({
+    city: z.string({
       required_error: "City is required",
     }),
     email: z.string({
@@ -25,6 +25,12 @@ const createCowBuyer = z.object({
     }),
     contactNo: z.string({
       required_error: "Contact is required",
+    }),
+    openingTime: z.string({
+      required_error: "Opening time is required",
+    }),
+    closingTime: z.string({
+      required_error: "Closing time is required",
     }),
   }),
 });

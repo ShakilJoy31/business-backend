@@ -15,6 +15,7 @@ const createCowSellerController = (req, res, next) => __awaiter(void 0, void 0, 
     try {
         const cowSellerData = req.body;
         const result = yield business_service_1.CowSellerService.createCowSellerService(cowSellerData);
+        console.log(cowSellerData);
         res.status(200).json({
             success: true,
             message: 'Business information is added successfully',
@@ -26,19 +27,20 @@ const createCowSellerController = (req, res, next) => __awaiter(void 0, void 0, 
     }
 });
 // Controller for getting all the seller.
-const getCowSellers = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+const getCowSellers = (req, res, next) => {
     try {
-        const result = yield business_service_1.CowSellerService.getCowSellers();
-        res.status(200).json({
-            success: true,
-            message: 'Business information retrieved successfully.',
-            data: result
-        });
+        // const result = CowSellerService.getCowSellers();
+        throw new Error('message');
+        // res.status(200).json({
+        //     success: true,
+        //     message: 'Business information retrieved successfully.',
+        //     data: result
+        // })
     }
     catch (error) {
         next(error);
     }
-});
+};
 const particularCowSeller = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = req.params.id;

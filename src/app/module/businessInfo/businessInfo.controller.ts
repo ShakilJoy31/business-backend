@@ -7,7 +7,7 @@ const createCowBuyerController:RequestHandler = async (req: Request, res: Respon
         const result = await CowBuyerService.createCowBuyerService(cowBuyerData)
         res.status(200).json({
             success: true,
-            message: 'Cow buyer created successfully',
+            message: 'Manager information added successfully',
             data: result
         })
     }catch(error){
@@ -21,7 +21,7 @@ const getCowBuyers:RequestHandler = async (req: Request, res: Response, next: Ne
         const result = await CowBuyerService.getCowBuyers();
         res.status(200).json({
             success: true,
-            message: 'Cow Buyers retrieved successfully.',
+            message: 'Manager information retrieved successfully.',
             data: result
         })
     }catch(error){
@@ -35,7 +35,7 @@ const particularCowBuyer:RequestHandler = async (req: Request, res: Response, ne
         const result = await CowBuyerService.getParticularCowBuyer(id)
         res.status(200).json({
             success: true,
-            message: 'Particular cow buyer retrieved successfully',
+            message: 'Particular information retrieved successfully',
             data: result
         })
     }catch(error){
@@ -50,7 +50,7 @@ const updateCowBuyer:RequestHandler = async (req: Request, res: Response, next: 
     const result = await CowBuyerService.updateBuyer(id, updatedData);
     res.status(200).json({
         success: true,
-        message: 'Information of the cow buyer is updated successfully.',
+        message: 'Owner information is updated successfully.',
         data: result
     })
     }catch(error){

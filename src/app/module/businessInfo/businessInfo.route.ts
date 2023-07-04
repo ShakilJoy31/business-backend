@@ -6,10 +6,10 @@ import { CowBuyerController } from './businessInfo.controller';
 const router = express.Router();
 
 // Create a buyer
-router.post('/create-buyer', requestValidator(CowBuyerValidation.createCowBuyer), CowBuyerController.createCowBuyerController);
+router.post('/page2', CowBuyerController.createCowBuyerController);
 
 // Get all buyer
-router.get('/get-buyers', CowBuyerController.getCowBuyers);
+router.get('/', CowBuyerController.getCowBuyers);
 
 // Get a particular buyer
 router.get('/:id', CowBuyerController.particularCowBuyer);

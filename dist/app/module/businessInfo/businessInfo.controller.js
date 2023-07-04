@@ -17,7 +17,7 @@ const createCowBuyerController = (req, res, next) => __awaiter(void 0, void 0, v
         const result = yield businessInfo_service_1.CowBuyerService.createCowBuyerService(cowBuyerData);
         res.status(200).json({
             success: true,
-            message: 'Cow buyer created successfully',
+            message: 'Manager information added successfully',
             data: result
         });
     }
@@ -31,7 +31,7 @@ const getCowBuyers = (req, res, next) => __awaiter(void 0, void 0, void 0, funct
         const result = yield businessInfo_service_1.CowBuyerService.getCowBuyers();
         res.status(200).json({
             success: true,
-            message: 'Cow Buyers retrieved successfully.',
+            message: 'Manager information retrieved successfully.',
             data: result
         });
     }
@@ -45,7 +45,7 @@ const particularCowBuyer = (req, res, next) => __awaiter(void 0, void 0, void 0,
         const result = yield businessInfo_service_1.CowBuyerService.getParticularCowBuyer(id);
         res.status(200).json({
             success: true,
-            message: 'Particular cow buyer retrieved successfully',
+            message: 'Particular information retrieved successfully',
             data: result
         });
     }
@@ -60,7 +60,7 @@ const updateCowBuyer = (req, res, next) => __awaiter(void 0, void 0, void 0, fun
         const result = yield businessInfo_service_1.CowBuyerService.updateBuyer(id, updatedData);
         res.status(200).json({
             success: true,
-            message: 'Information of the cow buyer is updated successfully.',
+            message: 'Owner information is updated successfully.',
             data: result
         });
     }
