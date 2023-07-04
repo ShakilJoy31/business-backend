@@ -7,7 +7,7 @@ export type ICowBuyer = {
     country: string,
     address: string,
     email: string,
-    mobileNumber: number,
+    mobileNumber: string,
     image: string
 }
 

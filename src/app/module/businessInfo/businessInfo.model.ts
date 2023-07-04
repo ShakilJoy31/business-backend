@@ -29,7 +29,7 @@ export const cowBuyerSchema = new Schema<ICowBuyer>({
     required: true,
   },
   mobileNumber: {
-    type: Number,
+    type: String,
     required: true,
   },
   image: {

@@ -28,7 +28,7 @@ exports.cowBuyerSchema = new mongoose_1.Schema({
         required: true,
     },
     mobileNumber: {
-        type: Number,
+        type: String,
         required: true,
     },
     image: {
