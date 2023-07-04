@@ -14,9 +14,6 @@ app.use(express.urlencoded({ extended: true }))
 // Application Route.
 app.use('/api/v1/', router);
 
-// Global Error handler
-app.use(globalErrorHandler);
-
 
 // Handle not found route
 app.use((req:Request, res: Response, next: NextFunction)=>{

@@ -27,6 +27,7 @@ export const cowSellerSchema = new Schema<ICowSeller>({
   email: {
     type: String,
     required: true,
+    unique: true
   },
   address: {
     type: String,
