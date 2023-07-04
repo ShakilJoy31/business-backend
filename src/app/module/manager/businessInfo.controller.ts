@@ -20,13 +20,12 @@ const createCowSellerController:RequestHandler = async (req: Request, res: Respo
 const getCowSellers:RequestHandler = (req: Request, res: Response, next: NextFunction) =>{
     try{
 
-        // const result = CowSellerService.getCowSellers();
-        throw new Error('message');
-        // res.status(200).json({
-        //     success: true,
-        //     message: 'Business information retrieved successfully.',
-        //     data: result
-        // })
+        const result = CowSellerService.getCowSellers();
+        res.status(200).json({
+            success: true,
+            message: 'Business information retrieved successfully.',
+            data: result
+        })
     }catch(error){
         next(error)
     }

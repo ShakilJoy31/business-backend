@@ -1,4 +1,4 @@
-import { Model, Schema, model } from "mongoose";
+import mongoose, { Model, Schema, model } from "mongoose";
 import { ICowSeller } from "./businessInfo.interface";
 
 export type CowSellerModel = Model<ICowSeller, object>;

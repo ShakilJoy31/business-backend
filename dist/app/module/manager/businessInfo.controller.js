@@ -29,13 +29,12 @@ const createCowSellerController = (req, res, next) => __awaiter(void 0, void 0, 
 // Controller for getting all the seller.
 const getCowSellers = (req, res, next) => {
     try {
-        // const result = CowSellerService.getCowSellers();
-        throw new Error('message');
-        // res.status(200).json({
-        //     success: true,
-        //     message: 'Business information retrieved successfully.',
-        //     data: result
-        // })
+        const result = business_service_1.CowSellerService.getCowSellers();
+        res.status(200).json({
+            success: true,
+            message: 'Business information retrieved successfully.',
+            data: result
+        });
     }
     catch (error) {
         next(error);
