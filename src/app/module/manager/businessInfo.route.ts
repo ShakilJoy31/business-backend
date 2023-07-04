@@ -6,9 +6,7 @@ import { CowSellerController } from "./businessInfo.controller";
 const router = express.Router();
 
 router.post(
-  "/page1",
-  requestValidator(CowBuyerValidation.createCowBuyer),
-  CowSellerController.createCowSellerController
+  "/page1", CowSellerController.createCowSellerController
 );
 
 router.get("/page1", CowSellerController.getCowSellers);

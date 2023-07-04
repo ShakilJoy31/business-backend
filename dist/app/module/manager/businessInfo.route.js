@@ -4,11 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const validateRequest_1 = __importDefault(require("../../middlewares/validateRequest"));
-const businessInfo_validation_1 = require("../businessInfo/businessInfo.validation");
 const businessInfo_controller_1 = require("./businessInfo.controller");
 const router = express_1.default.Router();
-router.post("/page1", (0, validateRequest_1.default)(businessInfo_validation_1.CowBuyerValidation.createCowBuyer), businessInfo_controller_1.CowSellerController.createCowSellerController);
+router.post("/page1", businessInfo_controller_1.CowSellerController.createCowSellerController);
 router.get("/page1", businessInfo_controller_1.CowSellerController.getCowSellers);
 router.get("/:id", businessInfo_controller_1.CowSellerController.particularCowSeller);
 router.patch("/:id", businessInfo_controller_1.CowSellerController.updateCowSeller);
