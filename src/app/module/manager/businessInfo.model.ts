@@ -1,4 +1,4 @@
-import mongoose, { Model, Schema, model } from "mongoose";
+import { Model, Schema, model } from "mongoose";
 import { ICowSeller } from "./businessInfo.interface";
 
 export type CowSellerModel = Model<ICowSeller, object>;
@@ -33,9 +33,8 @@ export const cowSellerSchema = new Schema<ICowSeller>({
     type: String,
     required: true,
   },
-  
   contactNo: {
-    type: Number,
+    type: String,
     required: true,
   },
   openingTime: {

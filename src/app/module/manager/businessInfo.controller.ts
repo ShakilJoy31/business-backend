@@ -17,10 +17,10 @@ const createCowSellerController:RequestHandler = async (req: Request, res: Respo
 }
 
 // Controller for getting all the seller.
-const getCowSellers:RequestHandler = (req: Request, res: Response, next: NextFunction) =>{
+const getCowSellers:RequestHandler = async (req: Request, res: Response, next: NextFunction) =>{
     try{
-
-        const result = CowSellerService.getCowSellers();
+        const result = await CowSellerService.getCowSellers();
+        console.log(result)
         res.status(200).json({
             success: true,
             message: 'Business information retrieved successfully.',

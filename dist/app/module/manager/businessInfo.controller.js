@@ -27,9 +27,10 @@ const createCowSellerController = (req, res, next) => __awaiter(void 0, void 0, 
     }
 });
 // Controller for getting all the seller.
-const getCowSellers = (req, res, next) => {
+const getCowSellers = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const result = business_service_1.CowSellerService.getCowSellers();
+        const result = yield business_service_1.CowSellerService.getCowSellers();
+        console.log(result);
         res.status(200).json({
             success: true,
             message: 'Business information retrieved successfully.',
@@ -39,7 +40,7 @@ const getCowSellers = (req, res, next) => {
     catch (error) {
         next(error);
     }
-};
+});
 const particularCowSeller = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = req.params.id;

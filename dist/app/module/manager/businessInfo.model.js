@@ -33,7 +33,7 @@ exports.cowSellerSchema = new mongoose_1.Schema({
         required: true,
     },
     contactNo: {
-        type: Number,
+        type: String,
         required: true,
     },
     openingTime: {

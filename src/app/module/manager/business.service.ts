@@ -6,8 +6,8 @@ const createCowSellerService = async (payload: ICowSeller) =>{
     return newCowSeller; 
 }
 
-const getCowSellers = async():Promise<ICowSeller[]> =>{
-    const result = await CowSellerModel.find({});
+const getCowSellers = async() =>{
+    const result = await CowSellerModel.find();
     return result
 }
 

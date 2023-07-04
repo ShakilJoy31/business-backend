@@ -3,17 +3,16 @@ import sellerRoute from '../module/manager/businessInfo.route'
 import buyerRoute from '../module/businessInfo/businessInfo.route'
 
 const router = express.Router()
-// router.use('/onnokichu', buyerRoute)
 const routesToVisit = [
+    {
+        path:'/onboarding',
+        route: sellerRoute
+    },
     // Owner | manager
     {
         path:'/onboarding',
         route: buyerRoute
     },
-    {
-        path:'/onboarding',
-        route: sellerRoute
-    }
 ]
 
 routesToVisit.forEach(route => router.use(route.path, route.route))

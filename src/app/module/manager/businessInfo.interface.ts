@@ -8,7 +8,7 @@ export type ICowSeller = {
     city: string,
     email: string,
     address: string,
-    contactNo: number,
+    contactNo: string,
     openingTime: string,
     closingTime: string
 }

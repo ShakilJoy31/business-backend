@@ -16,7 +16,7 @@ const createCowSellerService = (payload) => __awaiter(void 0, void 0, void 0, fu
     return newCowSeller;
 });
 const getCowSellers = () => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield businessInfo_model_1.CowSellerModel.find({});
+    const result = yield businessInfo_model_1.CowSellerModel.find();
     return result;
 });
 const getParticularCowSeller = (id) => __awaiter(void 0, void 0, void 0, function* () {

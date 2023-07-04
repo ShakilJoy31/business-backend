@@ -7,17 +7,16 @@ const express_1 = __importDefault(require("express"));
 const businessInfo_route_1 = __importDefault(require("../module/manager/businessInfo.route"));
 const businessInfo_route_2 = __importDefault(require("../module/businessInfo/businessInfo.route"));
 const router = express_1.default.Router();
-// router.use('/onnokichu', buyerRoute)
 const routesToVisit = [
+    {
+        path: '/onboarding',
+        route: businessInfo_route_1.default
+    },
     // Owner | manager
     {
         path: '/onboarding',
         route: businessInfo_route_2.default
     },
-    {
-        path: '/onboarding',
-        route: businessInfo_route_1.default
-    }
 ];
 routesToVisit.forEach(route => router.use(route.path, route.route));
 exports.default = router;
